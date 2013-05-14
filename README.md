@@ -23,7 +23,7 @@ Add on composer.json (see http://getcomposer.org/)
 
     "require" :  {
         // ...
-        "mremi/dolist-bundle":"dev-master",
+        "mremi/dolist-bundle": "dev-master"
     }
 
 #### Method b) Using the `deps` file (symfony 2.0 pattern)
