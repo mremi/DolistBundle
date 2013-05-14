@@ -21,7 +21,7 @@ ways to do this:
 
 Add on composer.json (see http://getcomposer.org/)
 
-    "require" :  {
+    "require":  {
         // ...
         "mremi/dolist-bundle": "dev-master"
     }
@@ -34,6 +34,7 @@ install`:
 ```
 [Dolist]
     git=https://github.com/mremi/Dolist
+    target=Mremi/Dolist
 
 [DolistBundle]
     git=https://github.com/mremi/DolistBundle
@@ -157,6 +158,7 @@ Two services allow you to add or update a contact, to use like this:
 
 ```php
 <?php
+
 $contactManager = $container->get('mremi_dolist.api.contact_manager');
 $fieldManager = $container->get('mremi_dolist.api.field_manager');
 
