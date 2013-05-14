@@ -39,7 +39,7 @@ class TestAuthenticationCommand extends ContainerAwareCommand
     /**
      * Gets the authentication service
      *
-     * @return \Mremi\Dolist\Api\Authentication\AuthenticationManagerInterface
+     * @return \Mremi\Dolist\Authentication\AuthenticationManagerInterface
      */
     private function getAuthenticationManager()
     {

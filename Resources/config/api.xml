@@ -11,12 +11,12 @@
             <argument />
         </service>
 
-        <service id="mremi_dolist.api.authentication_request" class="Mremi\Dolist\Api\Authentication\AuthenticationRequest">
+        <service id="mremi_dolist.api.authentication_request" class="Mremi\Dolist\Authentication\AuthenticationRequest">
             <argument />
             <argument />
         </service>
 
-        <service id="mremi_dolist.api.authentication_manager" class="Mremi\Dolist\Api\Authentication\AuthenticationManager">
+        <service id="mremi_dolist.api.authentication_manager" class="Mremi\Dolist\Authentication\AuthenticationManager">
             <argument type="service" id="mremi_dolist.api.authentication.soap_client" />
             <argument type="service" id="mremi_dolist.api.authentication_request" />
             <argument />
@@ -30,7 +30,7 @@
             <argument />
         </service>
 
-        <service id="mremi_dolist.api.contact_manager" class="Mremi\Dolist\Api\Contact\ContactManager">
+        <service id="mremi_dolist.api.contact_manager" class="Mremi\Dolist\Contact\ContactManager">
             <argument type="service" id="mremi_dolist.api.contact.soap_client" />
             <argument type="service" id="mremi_dolist.api.authentication_manager" />
             <argument />
@@ -38,7 +38,7 @@
             <argument type="service" id="logger" />
         </service>
 
-        <service id="mremi_dolist.api.field_manager" class="Mremi\Dolist\Api\Contact\FieldManager">
+        <service id="mremi_dolist.api.field_manager" class="Mremi\Dolist\Contact\FieldManager">
             <argument />
         </service>
         <!-- /contact -->

@@ -145,8 +145,8 @@ mremi_dolist:
                 features:           ~
                 keep_alive:         ~
             retries:       1
-            model_contact: Mremi\Dolist\Api\Contact\Contact
-            model_field:   Mremi\Dolist\Api\Contact\Field
+            model_contact: Mremi\Dolist\Contact\Contact
+            model_field:   Mremi\Dolist\Contact\Field
 ```
 
 <a name="add-contact"></a>

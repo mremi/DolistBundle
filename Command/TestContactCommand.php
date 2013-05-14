@@ -53,7 +53,7 @@ class TestContactCommand extends ContainerAwareCommand
     /**
      * Gets the contact manager service
      *
-     * @return \Mremi\Dolist\Api\Contact\ContactManagerInterface
+     * @return \Mremi\Dolist\Contact\ContactManagerInterface
      */
     private function getContactManager()
     {
@@ -63,7 +63,7 @@ class TestContactCommand extends ContainerAwareCommand
     /**
      * Gets the field manager service
      *
-     * @return \Mremi\Dolist\Api\Contact\FieldManagerInterface
+     * @return \Mremi\Dolist\Contact\FieldManagerInterface
      */
     private function getFieldManager()
     {
