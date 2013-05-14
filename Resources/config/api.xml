@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <!-- authentication -->
+        <service id="mremi_dolist.api.authentication.soap_client" class="SoapClient" public="false">
+            <argument />
+            <argument />
+        </service>
+
+        <service id="mremi_dolist.api.authentication_request" class="Mremi\Dolist\Api\Authentication\AuthenticationRequest">
+            <argument />
+            <argument />
+        </service>
+
+        <service id="mremi_dolist.api.authentication_manager" class="Mremi\Dolist\Api\Authentication\AuthenticationManager">
+            <argument type="service" id="mremi_dolist.api.authentication.soap_client" />
+            <argument type="service" id="mremi_dolist.api.authentication_request" />
+            <argument />
+            <argument type="service" id="logger" />
+        </service>
+        <!-- /authentication -->
+
+        <!-- contact -->
+        <service id="mremi_dolist.api.contact.soap_client" class="SoapClient" public="false">
+            <argument />
+            <argument />
+        </service>
+
+        <service id="mremi_dolist.api.contact_manager" class="Mremi\Dolist\Api\Contact\ContactManager">
+            <argument type="service" id="mremi_dolist.api.contact.soap_client" />
+            <argument type="service" id="mremi_dolist.api.authentication_manager" />
+            <argument />
+            <argument />
+            <argument type="service" id="logger" />
+        </service>
+
+        <service id="mremi_dolist.api.field_manager" class="Mremi\Dolist\Api\Contact\FieldManager">
+            <argument />
+        </service>
+        <!-- /contact -->
+    </services>
+</container>

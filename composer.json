@@ -1,0 +1,22 @@
+{
+    "name": "mremi/dolist-bundle",
+    "type": "symfony-bundle",
+    "description": "Implementation of Dolist library for Symfony2",
+    "keywords": ["CRM", "dolist", "api", "soap"],
+    "homepage": "https://github.com/mremi/DolistBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rémi Marseille",
+            "email": "marseille.remi@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "mremi/dolist": "dev-master"
+    },
+    "autoload": {
+        "psr-0": { "Mremi\\DolistBundle": "" }
+    },
+    "target-dir": "Mremi/DolistBundle"
+}
