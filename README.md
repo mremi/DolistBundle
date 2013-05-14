@@ -21,7 +21,7 @@ ways to do this:
 
 Add on composer.json (see http://getcomposer.org/)
 
-    "require":  {
+    "require": {
         // ...
         "mremi/dolist-bundle": "dev-master"
     }
@@ -59,6 +59,7 @@ in your autoloader:
 ``` php
 <?php
 // app/autoload.php
+
 $loader->registerNamespaces(array(
     // ...
     'Mremi' => array(
