@@ -7,6 +7,7 @@ This bundle implements the Dolist library for Symfony2.
 
 * [Installation](#installation)
 * [Add a contact](#add-contact)
+* [Retrieve contacts](#retrieve-contacts)
 
 <a name="installation"></a>
 
@@ -146,7 +147,7 @@ mremi_dolist:
                 stream_context:     ~
                 features:           ~
                 keep_alive:         ~
-            retries:       1
+            retries: 1
 ```
 
 <a name="add-contact"></a>
@@ -171,6 +172,26 @@ $ticket = $contactManager->save($contact);
 $saved = $contactManager->getStatusByTicket($ticket);
 
 if ($saved->isOk()) {
-    // ...
+    // contact has been saved...
+} else {
+    // something is wrong...
+    echo sprintf('Returned code: %s, description: %s', $saved->getReturnCode(), $saved->getDescription());
 }
 ```
+
+<a name="retrieve-contacts"></a>
+
+## Retrieve contacts
+
+```php
+<?php
+
+use Mremi\Dolist\Contact\GetContactRequest;
+
+$contactManager = $container->get('mremi_dolist.api.contact_manager');
+
+$request = new GetContactRequest;
+$request->setOffset(50);
+// ...
+
+$contacts = $contactManager->getContacts($request);

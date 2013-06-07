@@ -48,6 +48,11 @@ class TestContactCommand extends ContainerAwareCommand
             $output->writeln(sprintf('<error>Description:</error> %s', $saved->getDescription()));
             $output->writeln(sprintf('<error>Returned code:</error> %s', $saved->getReturnCode()));
         }
+
+        $contacts = $this->getContactManager()->getContacts();
+
+        $output->writeln(sprintf('<info>Count of returned contacts:</info> %s', $contacts->getReturnContactsCount()));
+        $output->writeln(sprintf('<info>Total count of contacts:</info> %s', $contacts->getTotalContactsCount()));
     }
 
     /**
