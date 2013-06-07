@@ -46,19 +46,7 @@ class Configuration implements ConfigurationInterface
 
                     ->append($this->getApiNode('authentication', 'http://api.dolist.net/v2/AuthenticationService.svc?wsdl'))
 
-                    ->append(
-                        $this->getApiNode('contact', 'http://api.dolist.net/v2/ContactManagementService.svc?wsdl')
-                            ->children()
-                                ->scalarNode('model_contact')
-                                    ->cannotBeEmpty()
-                                    ->defaultValue('Mremi\Dolist\Contact\Contact')
-                                ->end()
-                                ->scalarNode('model_field')
-                                    ->cannotBeEmpty()
-                                    ->defaultValue('Mremi\Dolist\Contact\Field')
-                                ->end()
-                            ->end()
-                    )
+                    ->append($this->getApiNode('contact', 'http://api.dolist.net/v2/ContactManagementService.svc?wsdl'))
                 ->end()
             ->end();
 

@@ -31,7 +31,6 @@ class MremiDolistExtension extends Extension
 
         $this->configureContactSoapClient($container, $config);
         $this->configureContactManager($container, $config);
-        $this->configureFieldManager($container, $config);
     }
 
     /**
@@ -94,19 +93,6 @@ class MremiDolistExtension extends Extension
     private function configureContactManager(ContainerBuilder $container, array $config)
     {
         $definition = $container->getDefinition('mremi_dolist.api.contact_manager');
-        $definition->replaceArgument(2, $config['api']['contact']['model_contact']);
-        $definition->replaceArgument(3, $config['api']['contact']['retries']);
-    }
-
-    /**
-     * Configures the field manager
-     *
-     * @param ContainerBuilder $container A container builder instance
-     * @param array            $config    An array of configuration
-     */
-    private function configureFieldManager(ContainerBuilder $container, array $config)
-    {
-        $definition = $container->getDefinition('mremi_dolist.api.field_manager');
-        $definition->replaceArgument(0, $config['api']['contact']['model_field']);
+        $definition->replaceArgument(2, $config['api']['contact']['retries']);
     }
 }

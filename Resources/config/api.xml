@@ -34,12 +34,10 @@
             <argument type="service" id="mremi_dolist.api.contact.soap_client" />
             <argument type="service" id="mremi_dolist.api.authentication_manager" />
             <argument />
-            <argument />
             <argument type="service" id="logger" />
         </service>
 
         <service id="mremi_dolist.api.field_manager" class="Mremi\Dolist\Contact\FieldManager">
-            <argument />
         </service>
         <!-- /contact -->
     </services>
