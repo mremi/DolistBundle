@@ -67,6 +67,7 @@ class Configuration implements ConfigurationInterface
         $node = $treeBuilder->root($name);
 
         $node
+            ->addDefaultsIfNotSet()
             ->children()
                 ->scalarNode('wsdl')
                     ->cannotBeEmpty()
