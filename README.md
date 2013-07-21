@@ -7,6 +7,10 @@ MremiDolistBundle
 
 This bundle implements the Dolist library for Symfony2.
 
+## Prerequisites
+
+This version of the bundle requires Symfony 2.1+.
+
 **Basic Docs**
 
 * [Installation](#installation)
@@ -17,67 +21,35 @@ This bundle implements the Dolist library for Symfony2.
 
 ## Installation
 
-### Step 1) Get the bundle and the library
+Installation is a quick 3 step process:
 
-First, grab the Dolist library and MremiDolistBundle. There are two different
-ways to do this:
+1. Download MremiDolistBundle using composer
+2. Enable the Bundle
+3. Configure the MremiDolistBundle
 
-#### Method a) Using composer (symfony 2.1 pattern)
+### Step 1: Download MremiDolistBundle using composer
 
-Add on composer.json (see http://getcomposer.org/)
+Add MremiDolistBundle in your composer.json:
 
+```js
+{
     "require": {
-        // ...
         "mremi/dolist-bundle": "dev-master"
     }
-
-#### Method b) Using the `deps` file (symfony 2.0 pattern)
-
-Add the following lines to your  `deps` file and then run `php bin/vendors
-install`:
-
-```
-[Dolist]
-    git=https://github.com/mremi/Dolist
-    target=Mremi/Dolist
-
-[DolistBundle]
-    git=https://github.com/mremi/DolistBundle
-    target=bundles/Mremi/Bundle/DolistBundle
+}
 ```
 
-#### Method c) Using submodules
+Now tell composer to download the bundle by running the command:
 
-Run the following commands to bring in the needed libraries as submodules.
-
-```bash
-git submodule add https://github.com/mremi/Dolist vendor/Mremi/Dolist
-git submodule add https://github.com/mremi/DolistBundle vendor/bundles/Mremi/Bundle/DolistBundle
+``` bash
+$ php composer.phar update mremi/dolist-bundle
 ```
 
-### Step 2) Register the namespaces
+Composer will install the bundle to your project's `vendor/mremi` directory.
 
-If you installed the bundle by composer, use the created autoload.php  (jump to step 3).
-Add the following two namespace entries to the `registerNamespaces` call
-in your autoloader:
+### Step 2: Enable the bundle
 
-``` php
-<?php
-// app/autoload.php
-
-$loader->registerNamespaces(array(
-    // ...
-    'Mremi' => array(
-        __DIR__.'/../vendor',
-        __DIR__.'/../vendor/bundles',
-    ),
-    // ...
-));
-```
-
-### Step 3) Register the bundle
-
-To start using the bundle, register it in your Kernel:
+Enable the bundle in the kernel:
 
 ``` php
 <?php
@@ -89,11 +61,10 @@ public function registerBundles()
         // ...
         new Mremi\DolistBundle\MremiDolistBundle(),
     );
-    // ...
 }
 ```
 
-### Step 4) Configure the bundle
+### Step 3: Configure the MremiDolistBundle
 
 The bundle comes with a sensible default configuration, which is listed below.
 However you have to configure at least your account identifier and
