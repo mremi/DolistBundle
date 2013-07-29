@@ -22,7 +22,8 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests extension loading throws exception if api is not set
      *
-     * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedExceptionMessage The child node "api" at path "mremi_dolist" must be configured.
      */
     public function testDolistLoadThrowsExceptionUnlessApiSet()
     {
@@ -35,7 +36,8 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests extension loading throws exception if account identifier is not set
      *
-     * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedExceptionMessage The child node "account_id" at path "mremi_dolist.api" must be configured.
      */
     public function testDolistLoadThrowsExceptionUnlessAccountIdSet()
     {
@@ -48,7 +50,8 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests extension loading throws exception if account identifier is empty
      *
-     * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedExceptionMessage The path "mremi_dolist.api.account_id" cannot contain an empty value, but got "".
      */
     public function testDolistLoadThrowsExceptionIfAccountIdEmpty()
     {
@@ -61,7 +64,8 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests extension loading throws exception if account identifier is not numeric
      *
-     * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedExceptionMessage Invalid configuration for path "mremi_dolist.api.account_id": Invalid account_id "azerty"
      */
     public function testDolistLoadThrowsExceptionIfAccountIdNotNumeric()
     {
@@ -74,7 +78,8 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests extension loading throws exception if authentication key is not set
      *
-     * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedExceptionMessage The child node "authentication_key" at path "mremi_dolist.api" must be configured.
      */
     public function testDolistLoadThrowsExceptionUnlessAuthenticationKeySet()
     {
@@ -87,7 +92,8 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests extension loading throws exception if authentication key is empty
      *
-     * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedExceptionMessage The path "mremi_dolist.api.authentication_key" cannot contain an empty value, but got "".
      */
     public function testDolistLoadThrowsExceptionIfAuthenticationKeyEmpty()
     {
@@ -100,7 +106,8 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests extension loading throws exception if authentication key is not string
      *
-     * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedExceptionMessage Invalid configuration for path "mremi_dolist.api.authentication_key": Invalid authentication_key 1234
      */
     public function testDolistLoadThrowsExceptionIfAuthenticationKeyNotString()
     {
@@ -113,7 +120,8 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests extension loading throws exception if authentication wsdl is empty
      *
-     * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedExceptionMessage The path "mremi_dolist.api.authentication.wsdl" cannot contain an empty value, but got "".
      */
     public function testDolistLoadThrowsExceptionIfAuthenticationWsdlEmpty()
     {
@@ -126,7 +134,8 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests extension loading throws exception if authentication Soap version is invalid
      *
-     * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedExceptionMessage Invalid configuration for path "mremi_dolist.api.authentication.options.soap_version": Invalid soap version "foo"
      */
     public function testDolistLoadThrowsExceptionIfAuthenticationSoapVersionInvalid()
     {
@@ -139,7 +148,8 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests extension loading throws exception if authentication connection timeout is not numeric
      *
-     * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedExceptionMessage Invalid configuration for path "mremi_dolist.api.authentication.options.connection_timeout": Invalid connection timeout "foo"
      */
     public function testDolistLoadThrowsExceptionIfAuthenticationConnectionTimeoutNotNumeric()
     {
@@ -152,7 +162,8 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests extension loading throws exception if authentication retries is not numeric
      *
-     * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedExceptionMessage Invalid configuration for path "mremi_dolist.api.authentication.retries": Invalid retries "foo"
      */
     public function testDolistLoadThrowsExceptionIfAuthenticationRetriesNotNumeric()
     {
@@ -165,7 +176,8 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests extension loading throws exception if contact wsdl is empty
      *
-     * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedExceptionMessage The path "mremi_dolist.api.contact.wsdl" cannot contain an empty value, but got "".
      */
     public function testDolistLoadThrowsExceptionIfContactWsdlEmpty()
     {
@@ -178,7 +190,8 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests extension loading throws exception if contact Soap version is invalid
      *
-     * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedExceptionMessage Invalid configuration for path "mremi_dolist.api.contact.options.soap_version": Invalid soap version "foo"
      */
     public function testDolistLoadThrowsExceptionIfContactSoapVersionInvalid()
     {
@@ -191,7 +204,8 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests extension loading throws exception if contact connection timeout is not numeric
      *
-     * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedExceptionMessage Invalid configuration for path "mremi_dolist.api.contact.options.connection_timeout": Invalid connection timeout "foo"
      */
     public function testDolistLoadThrowsExceptionIfContactConnectionTimeoutNotNumeric()
     {
@@ -204,7 +218,8 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests extension loading throws exception if contact retries is not numeric
      *
-     * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedExceptionMessage Invalid configuration for path "mremi_dolist.api.contact.retries": Invalid retries "foo"
      */
     public function testDolistLoadThrowsExceptionIfContactRetriesNotNumeric()
     {
