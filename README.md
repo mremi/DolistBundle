@@ -5,7 +5,7 @@ MremiDolistBundle
 [![Total Downloads](https://poser.pugx.org/mremi/dolist-bundle/downloads.png)](https://packagist.org/packages/mremi/dolist-bundle)
 [![Latest Stable Version](https://poser.pugx.org/mremi/dolist-bundle/v/stable.png)](https://packagist.org/packages/mremi/dolist-bundle)
 
-This bundle implements the Dolist library for Symfony2.
+This bundle implements the [Dolist](https://github.com/mremi/Dolist) library for Symfony2.
 
 ## Prerequisites
 
