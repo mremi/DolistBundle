@@ -1,6 +1,8 @@
 MremiDolistBundle
 =================
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/89c24e51-9896-4a9b-9419-788d2ca7b24a/big.png)](https://insight.sensiolabs.com/projects/89c24e51-9896-4a9b-9419-788d2ca7b24a)
+
 [![Build Status](https://api.travis-ci.org/mremi/DolistBundle.png?branch=master)](https://travis-ci.org/mremi/DolistBundle)
 [![Total Downloads](https://poser.pugx.org/mremi/dolist-bundle/downloads.png)](https://packagist.org/packages/mremi/dolist-bundle)
 [![Latest Stable Version](https://poser.pugx.org/mremi/dolist-bundle/v/stable.png)](https://packagist.org/packages/mremi/dolist-bundle)
