@@ -135,7 +135,7 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
      * Tests extension loading throws exception if authentication Soap version is invalid
      *
      * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
-     * @expectedExceptionMessage Invalid configuration for path "mremi_dolist.api.authentication.options.soap_version": Invalid soap version "foo"
+     * @expectedExceptionMessage The value "foo" is not allowed for path "mremi_dolist.api.authentication.options.soap_version". Permissible values: 1, 2
      */
     public function testDolistLoadThrowsExceptionIfAuthenticationSoapVersionInvalid()
     {
@@ -191,7 +191,7 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
      * Tests extension loading throws exception if contact Soap version is invalid
      *
      * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
-     * @expectedExceptionMessage Invalid configuration for path "mremi_dolist.api.contact.options.soap_version": Invalid soap version "foo"
+     * @expectedExceptionMessage The value "foo" is not allowed for path "mremi_dolist.api.contact.options.soap_version". Permissible values: 1, 2
      */
     public function testDolistLoadThrowsExceptionIfContactSoapVersionInvalid()
     {
