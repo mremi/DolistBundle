@@ -146,6 +146,20 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Tests extension loading throws exception if authentication trace is not a boolean
+     *
+     * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedExceptionMessage Invalid type for path "mremi_dolist.api.authentication.options.trace". Expected boolean, but got string.
+     */
+    public function testDolistLoadThrowsExceptionIfAuthenticationTraceNotBoolean()
+    {
+        $loader = new MremiDolistExtension;
+        $config = $this->getEmptyConfig();
+        $config['api']['authentication']['options']['trace'] = 'foo';
+        $loader->load(array($config), new ContainerBuilder);
+    }
+
+    /**
      * Tests extension loading throws exception if authentication connection timeout is not numeric
      *
      * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
@@ -198,6 +212,20 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
         $loader = new MremiDolistExtension;
         $config = $this->getEmptyConfig();
         $config['api']['contact']['options']['soap_version'] = 'foo';
+        $loader->load(array($config), new ContainerBuilder);
+    }
+
+    /**
+     * Tests extension loading throws exception if contact trace is not a boolean
+     *
+     * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedExceptionMessage Invalid type for path "mremi_dolist.api.contact.options.trace". Expected boolean, but got string.
+     */
+    public function testDolistLoadThrowsExceptionIfContactTraceNotBoolean()
+    {
+        $loader = new MremiDolistExtension;
+        $config = $this->getEmptyConfig();
+        $config['api']['contact']['options']['trace'] = 'foo';
         $loader->load(array($config), new ContainerBuilder);
     }
 
