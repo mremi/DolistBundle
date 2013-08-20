@@ -51,7 +51,7 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
      * Tests extension loading throws exception if account identifier is empty
      *
      * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
-     * @expectedExceptionMessage The path "mremi_dolist.api.account_id" cannot contain an empty value, but got "".
+     * @expectedExceptionMessage Invalid type for path "mremi_dolist.api.account_id". Expected int, but got string.
      */
     public function testDolistLoadThrowsExceptionIfAccountIdEmpty()
     {
@@ -65,7 +65,7 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
      * Tests extension loading throws exception if account identifier is not numeric
      *
      * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
-     * @expectedExceptionMessage Invalid configuration for path "mremi_dolist.api.account_id": Invalid account_id "azerty"
+     * @expectedExceptionMessage Invalid type for path "mremi_dolist.api.account_id". Expected int, but got string.
      */
     public function testDolistLoadThrowsExceptionIfAccountIdNotNumeric()
     {
