@@ -163,7 +163,7 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
      * Tests extension loading throws exception if authentication connection timeout is not numeric
      *
      * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
-     * @expectedExceptionMessage Invalid configuration for path "mremi_dolist.api.authentication.options.connection_timeout": Invalid connection timeout "foo"
+     * @expectedExceptionMessage Invalid type for path "mremi_dolist.api.authentication.options.connection_timeout". Expected int, but got string.
      */
     public function testDolistLoadThrowsExceptionIfAuthenticationConnectionTimeoutNotNumeric()
     {
@@ -233,7 +233,7 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
      * Tests extension loading throws exception if contact connection timeout is not numeric
      *
      * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
-     * @expectedExceptionMessage Invalid configuration for path "mremi_dolist.api.contact.options.connection_timeout": Invalid connection timeout "foo"
+     * @expectedExceptionMessage Invalid type for path "mremi_dolist.api.contact.options.connection_timeout". Expected int, but got string.
      */
     public function testDolistLoadThrowsExceptionIfContactConnectionTimeoutNotNumeric()
     {
