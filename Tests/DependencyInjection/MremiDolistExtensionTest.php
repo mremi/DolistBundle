@@ -177,7 +177,7 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
      * Tests extension loading throws exception if authentication retries is not numeric
      *
      * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
-     * @expectedExceptionMessage Invalid configuration for path "mremi_dolist.api.authentication.retries": Invalid retries "foo"
+     * @expectedExceptionMessage Invalid type for path "mremi_dolist.api.authentication.retries". Expected int, but got string.
      */
     public function testDolistLoadThrowsExceptionIfAuthenticationRetriesNotNumeric()
     {
@@ -247,7 +247,7 @@ class MremiDolistExtensionTest extends \PHPUnit_Framework_TestCase
      * Tests extension loading throws exception if contact retries is not numeric
      *
      * @expectedException        \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
-     * @expectedExceptionMessage Invalid configuration for path "mremi_dolist.api.contact.retries": Invalid retries "foo"
+     * @expectedExceptionMessage Invalid type for path "mremi_dolist.api.contact.retries". Expected int, but got string.
      */
     public function testDolistLoadThrowsExceptionIfContactRetriesNotNumeric()
     {

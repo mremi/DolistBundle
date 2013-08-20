@@ -85,13 +85,7 @@ class Configuration implements ConfigurationInterface
                         ->scalarNode('keep_alive')->end()
                     ->end()
                 ->end()
-                ->scalarNode('retries')
-                    ->defaultValue(1)
-                    ->validate()
-                        ->ifTrue(function($v) { return !is_numeric($v); })
-                        ->thenInvalid('Invalid retries %s')
-                    ->end()
-                ->end()
+                ->integerNode('retries')->defaultValue(1)->end()
             ->end();
 
         return $node;
