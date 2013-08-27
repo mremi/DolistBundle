@@ -2,7 +2,7 @@
     "name": "mremi/dolist-bundle",
     "type": "symfony-bundle",
     "description": "Implementation of Dolist library for Symfony2",
-    "keywords": ["CRM", "dolist", "api", "soap"],
+    "keywords": ["Symfony2", "CRM", "dolist", "api", "soap"],
     "homepage": "https://github.com/mremi/DolistBundle",
     "license": "MIT",
     "authors": [
