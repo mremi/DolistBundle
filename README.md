@@ -9,6 +9,10 @@ MremiDolistBundle
 
 This bundle implements the [Dolist](https://github.com/mremi/Dolist) library for Symfony2.
 
+## License
+
+This bundle is available under the [MIT license](Resources/meta/LICENSE).
+
 ## Prerequisites
 
 This version of the bundle requires Symfony 2.1+.
